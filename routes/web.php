@@ -2,6 +2,7 @@
 
 use Illuminate\Support\Facades\Auth;
 use Illuminate\Support\Facades\Route;
+use App\Http\Controllers\PemainController;
 
 /*
 |--------------------------------------------------------------------------
@@ -28,3 +29,7 @@ Route::put('/profile', 'ProfileController@update')->name('profile.update');
 Route::get('/about', function () {
     return view('about');
 })->name('about');
+
+// UTS
+
+Route::get('/pemain', [PemainController::class, 'index']);
